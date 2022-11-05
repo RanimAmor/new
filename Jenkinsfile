@@ -3,16 +3,22 @@ pipeline {
 
     stages {
         
-        stage('Build') {
+	    stage('Git') {
             steps {
-                sh 'npm install'
+                git 'https://github.com/gustavoapolinario/node-todo-frontend'          
             }
-        }
-        stage('Test') {
-            steps { 
-                sh 'npm test'
-            }
-        }
+		
+	    }
+        // stage('Build') {
+        //     steps {
+        //         sh 'npm install'
+        //     }
+        // }
+        // stage('Test') {
+        //     steps { 
+        //         sh 'npm test'
+        //     }
+        // }
         
         
     }
